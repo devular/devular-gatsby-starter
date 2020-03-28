@@ -56,10 +56,8 @@ const IndexPage = () => (
         audience atomization overcome abundance.
       </Styled.p>
       <Box>
-        <Image
-          sx={{ mb: 2 }}
-          src="https://source.unsplash.com/random/1200x800"
-        />
+        {/* Here's how you load an image from the ./static directory */}
+        <Image sx={{ mb: 2 }} src="/aerial.jpg" />
         <Text sx={{ textAlign: "right", fontSize: 1 }}>This is a caption</Text>
       </Box>
       <Styled.h2>A continuation of interest</Styled.h2>
