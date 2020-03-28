@@ -4,7 +4,6 @@ import { Styled } from "theme-ui"
 const Header = ({ siteTitle }) => (
   <Styled.h1
     sx={{
-      fontSize: [2, 4, 6],
       color: "text",
       mx: "auto",
       maxWidth: "widths[0]",

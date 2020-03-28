@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
           }
         `}
       />
-      <div sx={{ maxWidth: "960px", mx: "auto" }}>
+      <div sx={{ maxWidth: "700px", px: [10, 20], mx: "auto" }}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <footer></footer>
