@@ -28,6 +28,19 @@ const theme = {
     ui: "system-ui",
   },
   widths: ["960px"],
+  buttons: {
+    primary: {
+      bg: "text",
+      color: "background",
+      cursor: "pointer",
+      fontFamily: "ui",
+      fontWeight: "bold",
+      borderRadius: 0,
+      "&:hover": {
+        color: "white",
+      },
+    },
+  },
   styles: {
     hr: {
       borderColor: "black",

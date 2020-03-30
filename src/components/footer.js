@@ -1,23 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Grid, Box } from "theme-ui"
 
 export default () => (
-  <footer
+  <Box
+    as="footer"
     sx={{
+      display: "block",
       fontSize: 1,
-      marginTop: "auto",
       fontFamily: "ui",
-      maxWidth: 700,
+      maxWidth: 600,
+      width: "100%",
+      m: "auto",
     }}
   >
-    <div
-      sx={{
-        display: "grid",
-        gridTemplateRows: ["repeat(8, 32px)", "repeat(4, 32px)"],
-        gridTemplateColumns: ["repeat(2, 1fr)", "repeat(4, 1fr)"],
-        gridAutoFlow: "column",
-      }}
-    >
+    <Grid gap={2} columns={[2, 4]}>
       <Link to="/" sx={{ py: 2 }}>
         Home
       </Link>
@@ -66,7 +63,7 @@ export default () => (
       <Link to="/contact" sx={{ py: 2 }}>
         Contact
       </Link>
-    </div>
+    </Grid>
     <div
       sx={{
         display: "flex",
@@ -83,5 +80,5 @@ export default () => (
       </Link>
       <div sx={{ mx: 1 }} />© 2020 Devular
     </div>
-  </footer>
+  </Box>
 )
