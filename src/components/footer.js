@@ -6,6 +6,7 @@ export default () => (
     sx={{
       fontSize: 1,
       marginTop: "auto",
+      fontFamily: "ui",
     }}
   >
     <div

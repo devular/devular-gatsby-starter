@@ -3,10 +3,17 @@ import { base as rootPreset } from "@theme-ui/presets"
 
 const theme = {
   ...rootPreset,
+  useColorSchemeMediaQuery: true,
   colors: {
     ...rootPreset.colors,
     background: "#ffd1dc",
     text: "#231f20",
+    modes: {
+      dark: {
+        text: "#ffd1dc",
+        background: "#231f20",
+      },
+    },
   },
   fontWeights: {
     heading: 400,
