@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import cssReset from "../styles/reset"
 import { Global, css } from "@emotion/core"
 import Header from "./header"
+import Footer from "./footer"
 import { ThemeProvider } from "theme-ui"
 import theme from "../styles/theme"
 
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
       <div sx={{ maxWidth: "700px", px: [10, 20], mx: "auto" }}>
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
-        <footer></footer>
+        <Footer />
       </div>
     </ThemeProvider>
   )
