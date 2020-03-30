@@ -5,6 +5,7 @@ export default () => (
   <footer
     sx={{
       fontSize: 1,
+      marginTop: "auto",
     }}
   >
     <div

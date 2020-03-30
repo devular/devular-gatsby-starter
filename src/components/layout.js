@@ -13,8 +13,7 @@ import { Global, css } from "@emotion/core"
 import Header from "./header"
 import Footer from "./footer"
 import { ThemeProvider } from "theme-ui"
-import theme from "../styles/theme"
-
+import siteTheme from "../styles/theme"
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -27,17 +26,36 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={siteTheme}>
       <Global styles={cssReset} />
       <Global
-        styles={css`
+        styles={theme => css`
           body {
-            -webkit-font-smoothing: antialiased;
             font-family: ${theme.fonts.body};
+          }
+          html {
+            height: 100%;
+          }
+          body,
+          #___gatsby,
+          #gatsby-focus-wrapper {
+            min-height: 100vh;
+            overflow: scroll;
           }
         `}
       />
-      <div sx={{ maxWidth: "700px", px: [10, 20], mx: "auto" }}>
+      <div
+        sx={{
+          maxWidth: "700px",
+          px: [4],
+          mx: "auto",
+          minHeight: "100vh",
+          overflow: "scroll",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+        }}
+      >
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />

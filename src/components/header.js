@@ -1,17 +1,21 @@
 import React from "react"
 import { Styled } from "theme-ui"
+import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => (
-  <Styled.h1
-    sx={{
-      color: "text",
-      mx: "auto",
-      maxWidth: "widths[0]",
-      my: [3],
-    }}
-  >
-    {siteTitle}
-  </Styled.h1>
+  <Link to="/">
+    <Styled.h1
+      sx={{
+        fontFamily: "ui",
+        fontWeight: "bold",
+        color: "text",
+        my: [3],
+        textAlign: "left",
+      }}
+    >
+      {siteTitle}
+    </Styled.h1>
+  </Link>
 )
 
 export default Header

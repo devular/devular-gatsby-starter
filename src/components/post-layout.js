@@ -4,16 +4,21 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 import Layout from "./layout"
+import { Styled, Grid } from "theme-ui"
 
-const shortcodes = { Link } // Provide common components here
+const components = Styled // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
-      <h1>{mdx.frontmatter.title}</h1>
-      <MDXProvider components={shortcodes}>
-        <MDXRenderer>{mdx.body}</MDXRenderer>
+      <MDXProvider components={components}>
+        <Grid gap={3} columns={1} mb={[4, 6]}>
+          <Styled.h2 as="h1">{mdx.frontmatter.title}</Styled.h2>
+          <Styled.hr />
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </Grid>
       </MDXProvider>
+      <Styled.hr />
     </Layout>
   )
 }
