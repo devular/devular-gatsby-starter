@@ -41,6 +41,11 @@ const IndexPage = () => (
         </Grid>
       </Grid>
       <Styled.hr />
+      <Box>
+        {/* Here's how you load an image from the ./static directory */}
+        <Image sx={{ mb: 2 }} src="/aerial.jpg" />
+        <Text sx={{ textAlign: "right", fontSize: 1 }}>This is a caption</Text>
+      </Box>
       <Styled.h2>The introduction</Styled.h2>
       <Styled.p>
         Buttry dingbat stupid commenters Jurgen Habermas Arab spring RSS Encyclo
@@ -55,11 +60,7 @@ const IndexPage = () => (
         What Would Google Do Steve Jobs we will make them pay Aron Pilhofer
         audience atomization overcome abundance.
       </Styled.p>
-      <Box>
-        {/* Here's how you load an image from the ./static directory */}
-        <Image sx={{ mb: 2 }} src="/aerial.jpg" />
-        <Text sx={{ textAlign: "right", fontSize: 1 }}>This is a caption</Text>
-      </Box>
+
       <Styled.h2>A continuation of interest</Styled.h2>
       <Styled.p>
         Buttry dingbat stupid commenters Jurgen Habermas Arab spring RSS Encyclo
