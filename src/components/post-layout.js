@@ -12,7 +12,12 @@ export default function PageTemplate({ data: { mdx } }) {
   return (
     <Layout>
       <MDXProvider components={components}>
-        <Grid gap={3} columns={1} mb={[4, 6]}>
+        <Grid
+          gap={3}
+          columns={1}
+          mb={[4, 6]}
+          sx={{ maxWidth: 600, mx: "auto" }}
+        >
           <Styled.h2 as="h1">{mdx.frontmatter.title}</Styled.h2>
           <Styled.hr />
           <MDXRenderer>{mdx.body}</MDXRenderer>

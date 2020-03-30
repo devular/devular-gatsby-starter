@@ -44,9 +44,9 @@ const Layout = ({ children }) => {
           }
         `}
       />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         sx={{
-          maxWidth: "700px",
           px: [4],
           mx: "auto",
           minHeight: "100vh",
@@ -56,7 +56,6 @@ const Layout = ({ children }) => {
           justifyContent: "space-between",
         }}
       >
-        <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <Footer />
       </div>

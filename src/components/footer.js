@@ -7,6 +7,7 @@ export default () => (
       fontSize: 1,
       marginTop: "auto",
       fontFamily: "ui",
+      maxWidth: 700,
     }}
   >
     <div
