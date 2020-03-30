@@ -8,9 +8,11 @@ const theme = {
     ...rootPreset.colors,
     background: "#ffd1dc",
     text: "#231f20",
+    hoverText: "white",
     modes: {
       dark: {
         text: "#ffd1dc",
+        hoverText: "#D3637D",
         background: "#231f20",
       },
     },
@@ -30,6 +32,7 @@ const theme = {
   widths: ["960px"],
   buttons: {
     primary: {
+      transition: "all 0.2s",
       bg: "text",
       color: "background",
       cursor: "pointer",
@@ -37,13 +40,14 @@ const theme = {
       fontWeight: "bold",
       borderRadius: 0,
       "&:hover": {
-        color: "white",
+        bg: "hoverText",
+        color: "text",
       },
     },
   },
   styles: {
     hr: {
-      borderColor: "black",
+      borderColor: "text",
       ...rootPreset.styles.hr,
       width: "100%",
     },
