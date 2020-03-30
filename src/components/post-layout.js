@@ -23,7 +23,6 @@ export default function PageTemplate({ data: { mdx } }) {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Grid>
       </MDXProvider>
-      <Styled.hr />
     </Layout>
   )
 }
