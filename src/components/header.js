@@ -1,7 +1,7 @@
 import React from "react"
 import { useColorMode, Button } from "theme-ui"
 import { Link } from "gatsby"
-import { Grid } from "theme-ui"
+import { Flex } from "theme-ui"
 
 const Mode = props => {
   const [colorMode, setColorMode] = useColorMode()
@@ -33,17 +33,23 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <Link
-      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [3], py: 2 }}
+      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [5, 3], py: 2 }}
       to="/"
     >
       {siteTitle}
     </Link>
-    <Grid columns={2} m={[2, null, 0]}>
-      <Link sx={{ ml: "auto", mr: 3 }} to="/posts">
+    <Flex
+      sx={{
+        width: ["100%", "inherit"],
+        justifyContent: "space-between",
+        m: [2, 0],
+      }}
+    >
+      <Link to="/posts" sx={{ mr: [null, 3] }}>
         <Button>Read Posts</Button>
       </Link>
       <Mode />
-    </Grid>
+    </Flex>
   </header>
 )
 
