@@ -1,12 +1,31 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Devular's default starter
+  Devular's Gatsby Starter
 </h1>
+
+## 🧥 Bespoke Features
+
+This Gatsby starter comes with a few features tailored to our particular needs, but we imagine a few other people will have had the same issues, hopefully it's useful to someone!
+
+1. **Theme UI preconfigured**
+
+   [Theme UI](https://theme-ui.com) is argubly _the_ most powerful way to theme, style, and componentize React apps around. It's configured out of the box with a slew of plugins so you can get started styling with the `sx` prop, configure light and dark modes, and start theming with your `theme.js` file straight outta the gate.
+
+2. **MDX powered blog**
+
+   Why write any other way? Markdown blogging a-la Jekkyl is included out of the box, just create a new post in the `content/posts` folder to get started. MDX is supported, so you can `import` components into your blog and have them rendered in place as HTML, and running in the client as interactive JavaScript.
+
+3. **Simply and reliably add custom fonts**
+
+   Every website uses them, why are they such a pain to configure? Worry no longer, simply run:
+
+   ```sh
+   npm run add-font install -p ~/User/example/Downloads/my-fonts/font.org
+   ```
+
+   Our script will copy the file to the right place in Gatsby as well as generate all the font-face rules and
+   config required to async load the font. Restart Gatsby (webfont-loader limitation), and you're ready to go.
+
+---
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
