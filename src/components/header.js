@@ -1,6 +1,7 @@
 import React from "react"
 import { useColorMode, Button } from "theme-ui"
 import { Link } from "gatsby"
+import { Flex } from "theme-ui"
 
 const Mode = props => {
   const [colorMode, setColorMode] = useColorMode()
@@ -20,22 +21,35 @@ const Header = ({ siteTitle }) => (
     sx={{
       display: "flex",
       alignItems: "center",
+      flexDirection: ["column", "row"],
       justifyContent: "space-between",
       borderBottom: `0.5px solid`,
       borderColor: "text",
       mb: 4,
       px: 4,
       py: 2,
+      position: "sticky",
+      top: 0,
     }}
   >
     <Link
-      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [3], py: 2 }}
+      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [5, 3], py: 2 }}
       to="/"
     >
       {siteTitle}
     </Link>
-    <Button sx={{ ml: "auto", mr: 3 }}>Get the App</Button>
-    <Mode />
+    <Flex
+      sx={{
+        width: ["100%", "inherit"],
+        justifyContent: "space-between",
+        m: [2, 0],
+      }}
+    >
+      <Link to="/posts" sx={{ mr: [null, 3] }}>
+        <Button>Read Posts</Button>
+      </Link>
+      <Mode />
+    </Flex>
   </header>
 )
 

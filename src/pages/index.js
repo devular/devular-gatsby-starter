@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { Image, Text, Grid, Box, Styled } from "theme-ui"
 
