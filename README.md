@@ -19,7 +19,7 @@ This Gatsby starter comes with a few features tailored to our particular needs, 
    Every website uses them, why are they such a pain to configure? Worry no longer, simply run:
 
    ```sh
-   npm run add-font install -p ~/User/example/Downloads/my-fonts/font.org
+   npm run add-font ~/User/example/Downloads/my-fonts/font.org
    ```
 
    Our script will copy the file to the right place in Gatsby as well as generate all the font-face rules and
