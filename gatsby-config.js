@@ -1,3 +1,10 @@
+var fontFamilyies = []
+try {
+  fontConfig = require("./static/fonts/font-config.json").fonts
+} catch (e) {}
+
+// Add any manual font family names to this array
+const fontFamilies = [...new Set(fontConfig.map(font => font.postScriptName))]
 module.exports = {
   siteMetadata: {
     title: "Devular Gatsby Starter",
@@ -24,6 +31,15 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: fontFamilies,
+          urls: ["/fonts/auto-fonts.css", "/fonts/manual-fonts.css"],
+        },
       },
     },
     {
