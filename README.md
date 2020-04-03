@@ -27,9 +27,9 @@ This Gatsby starter comes with a few features tailored to our particular needs, 
 
 ## 💫 Deploy
 
-    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/devular/devular-gatsby-starter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/devular/devular-gatsby-starter)
 
-    [![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/devular/devular-gatsby-default)
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/devular/devular-gatsby-default)
 
 ---
 
