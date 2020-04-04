@@ -33,7 +33,7 @@ const Header = ({ siteTitle }) => (
     }}
   >
     <Link
-      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [5, 3], py: 2 }}
+      sx={{ fontFamily: "ui", fontWeight: 700, fontSize: [6, 3], py: 2 }}
       to="/"
     >
       {siteTitle}
