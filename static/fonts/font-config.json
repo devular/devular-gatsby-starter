@@ -1,3 +1,11 @@
 {
-  "fonts": []
+  "fonts": [
+    {
+      "postScriptName": "NewYorkSmall-MediumItalic",
+      "fontSubfamily": "Medium Italic",
+      "fileName": "NewYorkSmall-MediumItalic.otf",
+      "bold": false,
+      "italic": true
+    }
+  ]
 }
