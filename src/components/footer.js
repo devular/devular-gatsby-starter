@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Grid, Box } from "theme-ui"
+import { Flex, Grid, Box } from "theme-ui"
 
 export default () => (
   <Box
@@ -14,7 +14,7 @@ export default () => (
       m: "auto",
     }}
   >
-    <Grid gap={2} columns={[2, 4]}>
+    <Grid gap={2} columns={[3, 4]}>
       <Link to="/" sx={{ py: 2 }}>
         Home
       </Link>
@@ -64,11 +64,9 @@ export default () => (
         Contact
       </Link>
     </Grid>
-    <div
+    <Flex
       sx={{
-        display: "flex",
-        justifyContent: "flex-end",
-        p: 3,
+        my: 4,
       }}
     >
       <Link to="/privacy-policy" sx={{ color: "inherit" }}>
@@ -79,6 +77,6 @@ export default () => (
         Terms of Use
       </Link>
       <div sx={{ mx: 1 }} />© 2020 Devular
-    </div>
+    </Flex>
   </Box>
 )

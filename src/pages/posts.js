@@ -17,7 +17,6 @@ const PostTeaser = ({ excerpt, title, slug }) => (
 
 const HookDemos = () => {
   const posts = useAllPosts()
-  console.log({ posts })
   return (
     <Layout>
       <SEO title="Home" />
