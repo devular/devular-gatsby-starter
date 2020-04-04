@@ -3,12 +3,15 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "./layout"
 import { Styled, Grid, Flex } from "theme-ui"
 
 const components = Styled // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
+  const image = mdx.frontmatter.image
+  console.log({ image })
   return (
     <Layout>
       <MDXProvider components={components}>
@@ -17,6 +20,7 @@ export default function PageTemplate({ data: { mdx } }) {
             <span>{mdx.frontmatter.publishDate}</span>
           </Grid>
           <Styled.h2 as="h1">{mdx.frontmatter.title}</Styled.h2>
+          <Img fluid={mdx.frontmatter.image.childImageSharp.fluid} />
           <Flex
             sx={{
               fontFamily: "ui",
@@ -47,6 +51,13 @@ export const pageQuery = graphql`
         title
         publishDate: date(fromNow: false, formatString: "Do MMMM Y")
         fromNow: date(fromNow: true)
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       wordCount {
         words

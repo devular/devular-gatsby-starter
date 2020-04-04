@@ -3,8 +3,9 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
-import { Box, Grid, Styled } from "theme-ui"
+import { Flex, Grid, Styled } from "theme-ui"
 
 import { useAllPosts } from "../data-hooks/all-posts"
 
@@ -12,22 +13,30 @@ const PostTeaser = ({
   excerpt,
   wordCount: { words, paragraphs },
   timeToRead,
-  frontmatter: { publishDate, fromNow, title },
+  frontmatter: { image, publishDate, fromNow, title },
   fields: { slug },
 }) => (
   <Link to={slug}>
-    <Grid columns={1} gap={[3]} sx={{ border: "1px solid", p: 3 }}>
+    <Grid columns={1} gap={[3]}>
       <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
         <span>{publishDate}</span>
       </Grid>
       <Styled.h2>{title}</Styled.h2>
+      <Img fluid={image.childImageSharp.fluid} />
       <Styled.p>{excerpt}</Styled.p>
       <Styled.hr />
-      <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[3]} gap={3}>
+      <Flex
+        sx={{
+          fontFamily: "ui",
+          fontSize: 0,
+          color: "text",
+          justifyContent: "space-between",
+        }}
+      >
         <span>{timeToRead} minute read</span>
         <span>{words} words</span>
         <span>{fromNow}</span>
-      </Grid>
+      </Flex>
     </Grid>
   </Link>
 )

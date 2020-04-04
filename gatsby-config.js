@@ -17,6 +17,8 @@ module.exports = {
     postsPrefix: "posts",
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     {
@@ -31,6 +33,13 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -71,8 +80,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
 
     {
       resolve: `gatsby-plugin-manifest`,
