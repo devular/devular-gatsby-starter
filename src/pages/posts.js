@@ -16,17 +16,17 @@ const PostTeaser = ({
   fields: { slug },
 }) => (
   <Link to={slug}>
-    <Grid columns={1} gap={[3]}>
-      <Styled.h2>{title}</Styled.h2>
-      <Styled.p>{excerpt}</Styled.p>
+    <Grid columns={1} gap={[3]} sx={{ border: "1px solid", p: 3 }}>
       <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
         <span>{publishDate}</span>
-        <span>{fromNow}</span>
       </Grid>
+      <Styled.h2>{title}</Styled.h2>
+      <Styled.p>{excerpt}</Styled.p>
       <Styled.hr />
-      <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
-        <span>Time to Read: {timeToRead} minutes</span>
-        <span>Word Count: {words} </span>
+      <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[3]} gap={3}>
+        <span>{timeToRead} minute read</span>
+        <span>{words} words</span>
+        <span>{fromNow}</span>
       </Grid>
     </Grid>
   </Link>

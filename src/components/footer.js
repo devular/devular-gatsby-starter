@@ -12,6 +12,7 @@ export default () => (
       maxWidth: 600,
       width: "100%",
       m: "auto",
+      mt: 5,
     }}
   >
     <Grid gap={2} columns={[3, 4]}>
