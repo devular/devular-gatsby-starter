@@ -1,9 +1,9 @@
 {
   "fonts": [
     {
-      "postScriptName": "NewYorkSmall-MediumItalic",
-      "fontSubfamily": "Medium Italic",
-      "fileName": "NewYorkSmall-MediumItalic.otf",
+      "postScriptName": "DMSerifText-Italic",
+      "fontSubfamily": "Italic",
+      "fileName": "DMSerifText-Italic.ttf",
       "bold": false,
       "italic": true
     }

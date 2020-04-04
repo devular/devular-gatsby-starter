@@ -26,7 +26,7 @@ const theme = {
   },
   fonts: {
     body: "Georgia",
-    heading: "NewYorkSmall-MediumItalic",
+    heading: "DMSerifText-Italic",
     ui: "system-ui",
   },
   widths: ["960px"],
