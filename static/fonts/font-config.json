@@ -1,11 +1,3 @@
 {
-  "fonts": [
-    {
-      "postScriptName": "DMSerifText-Italic",
-      "fontSubfamily": "Italic",
-      "fileName": "DMSerifText-Italic.ttf",
-      "bold": false,
-      "italic": true
-    }
-  ]
+  "fonts": []
 }

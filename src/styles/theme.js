@@ -18,7 +18,7 @@ const theme = {
     },
   },
   fontWeights: {
-    heading: 400,
+    heading: 700,
     body: 400,
   },
   lineHeights: {
@@ -26,7 +26,7 @@ const theme = {
   },
   fonts: {
     body: "Georgia",
-    heading: "DMSerifText-Italic",
+    heading: "Helvetica Neue",
     ui: "system-ui",
   },
   widths: ["960px"],

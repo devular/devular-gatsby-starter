@@ -8,10 +8,27 @@ import { Box, Grid, Styled } from "theme-ui"
 
 import { useAllPosts } from "../data-hooks/all-posts"
 
-const PostTeaser = ({ excerpt, title, slug }) => (
+const PostTeaser = ({
+  excerpt,
+  wordCount: { words, paragraphs },
+  timeToRead,
+  frontmatter: { publishDate, fromNow, title },
+  fields: { slug },
+}) => (
   <Link to={slug}>
-    <Styled.h2>{title}</Styled.h2>
-    <Styled.p>{excerpt}</Styled.p>
+    <Grid columns={1} gap={[3]}>
+      <Styled.h2>{title}</Styled.h2>
+      <Styled.p>{excerpt}</Styled.p>
+      <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
+        <span>{publishDate}</span>
+        <span>{fromNow}</span>
+      </Grid>
+      <Styled.hr />
+      <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
+        <span>Time to Read: {timeToRead} minutes</span>
+        <span>Word Count: {words} </span>
+      </Grid>
+    </Grid>
   </Link>
 )
 
@@ -25,11 +42,7 @@ const HookDemos = () => {
           Posts
         </Styled.h1>
         {posts.map(post => (
-          <PostTeaser
-            excerpt={post.excerpt}
-            title={post.frontmatter.title}
-            slug={post.fields.slug}
-          />
+          <PostTeaser {...post} />
         ))}
       </Grid>
     </Layout>
