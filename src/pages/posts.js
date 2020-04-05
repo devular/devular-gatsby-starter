@@ -23,8 +23,6 @@ const PostTeaser = ({
       </Grid>
       <Styled.h2>{title}</Styled.h2>
       <Img fluid={image.childImageSharp.fluid} />
-      <Styled.p>{excerpt}</Styled.p>
-      <Styled.hr />
       <Flex
         sx={{
           fontFamily: "ui",
@@ -37,6 +35,8 @@ const PostTeaser = ({
         <span>{words} words</span>
         <span>{fromNow}</span>
       </Flex>
+      <Styled.hr />
+      <Styled.p>{excerpt}</Styled.p>
     </Grid>
   </Link>
 )
@@ -47,9 +47,9 @@ const HookDemos = () => {
     <Layout>
       <SEO title="Home" />
       <Grid gap={3} columns={1} mb={[4, 6]} sx={{ maxWidth: [600], m: "auto" }}>
-        <Styled.h1 sx={{ fontFamily: "ui", fontWeight: "bold" }}>
+        {/* <Styled.h1 sx={{ fontFamily: "ui", fontWeight: "bold" }}>
           Posts
-        </Styled.h1>
+        </Styled.h1> */}
         {posts.map(post => (
           <PostTeaser {...post} />
         ))}
