@@ -14,6 +14,8 @@ This Gatsby starter comes with a few features tailored to our particular needs, 
 
    Why write any other way? Markdown blogging a-la Jekkyl is included out of the box, just create a new post in the `content/posts` folder to get started. MDX is supported, so you can `import` components into your blog and have them rendered in place as HTML, and running in the client as interactive JavaScript.
 
+   Write components into `content/components` for use in your MDX blog, they have access to all packages, and will work with theme values out of the box.
+
 3. **Simply and reliably add custom fonts**
 
    Every website uses them, why are they such a pain to configure? Worry no longer, simply run:
