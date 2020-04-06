@@ -6,6 +6,8 @@
 
 This Gatsby starter comes with a few features tailored to our particular needs, but we imagine a few other people will have had the same issues, hopefully it's useful to someone!
 
+> Much of this work was done by [@leonoragilmour](https://github.com/leonoragilmour) in another project, and shamelessly copied into this repo by [@jonsherrard](https://github.com/jonsherrard), taking all the commmit-credit.
+
 1. **Theme UI preconfigured**
 
    [Theme UI](https://theme-ui.com) is argubly _the_ most powerful way to theme, style, and componentize React apps around. It's configured out of the box with a slew of plugins so you can get started styling with the `sx` prop, configure light and dark modes, and start theming with your `theme.js` file straight outta the gate.
@@ -26,6 +28,14 @@ This Gatsby starter comes with a few features tailored to our particular needs, 
 
    Our script will copy the file to the right place in Gatsby as well as generate all the font-face rules and
    config required to async load the font. Restart Gatsby (webfont-loader limitation), and you're ready to go.
+
+   We use [https://github.com/typekit/webfontloader](https://github.com/typekit/webfontloader) with Gatsby the following font platforms are also supported:
+
+   - Adobe Edge Web Fonts
+   - Fontdeck
+   - Fonts.com
+   - Google
+   - Typekit
 
 ## 💫 Deploy
 
