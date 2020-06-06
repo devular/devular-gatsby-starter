@@ -1,11 +1,7 @@
 import React from "react"
-
+import { Grid, Styled } from "theme-ui"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-
-import { Image, Text, Grid, Box, Styled } from "theme-ui"
-
 import { useAllPosts } from "../data-hooks/all-posts"
 
 const HookDemos = () => {

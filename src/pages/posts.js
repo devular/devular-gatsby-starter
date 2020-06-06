@@ -17,12 +17,12 @@ const PostTeaser = ({
   fields: { slug },
 }) => (
   <Link to={slug}>
-    <Grid columns={1} gap={[3]}>
+    <Grid columns={1} gap={[3]} sx={{ mb: [3, 4, 5] }}>
       <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[2]} gap={3}>
         <span>{publishDate}</span>
       </Grid>
       <Styled.h2>{title}</Styled.h2>
-      <Img fluid={image.childImageSharp.fluid} />
+      {image && <Img fluid={image.childImageSharp.fluid} />}
       <Flex
         sx={{
           fontFamily: "ui",

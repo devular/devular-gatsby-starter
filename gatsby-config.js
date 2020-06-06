@@ -19,7 +19,6 @@ module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -69,7 +68,10 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-vscode`,
+            resolve: `gatsby-remark-shiki`,
+            options: {
+              theme: "monokai",
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
