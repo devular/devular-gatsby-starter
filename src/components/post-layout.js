@@ -1,11 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react"
+import { Flex, Grid, Styled } from "theme-ui"
 import Layout from "./layout"
-import { Styled, Grid, Flex } from "theme-ui"
 
 const components = Styled // Provide common components here
 
@@ -20,7 +19,9 @@ export default function PageTemplate({ data: { mdx } }) {
             <span>{mdx.frontmatter.publishDate}</span>
           </Grid>
           <Styled.h2 as="h1">{mdx.frontmatter.title}</Styled.h2>
-          <Img fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+          {mdx.frontmatter.image && (
+            <Img fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+          )}
           <Flex
             sx={{
               fontFamily: "ui",

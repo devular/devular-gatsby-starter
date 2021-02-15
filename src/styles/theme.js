@@ -86,6 +86,11 @@ const theme = {
         minHeight: "100vh",
         overflow: "scroll",
       },
+      pre: {
+        fontSize: [1, 2],
+        lineHeight: 1.4,
+        padding: [3, 4],
+      },
     },
   },
 }

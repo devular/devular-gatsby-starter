@@ -1,10 +1,7 @@
 import React from "react"
-
+import { Box, Grid, Image, Styled, Text } from "theme-ui"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-
-import { Image, Text, Grid, Box, Styled } from "theme-ui"
 
 const BoxOut = () => (
   <>
