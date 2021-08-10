@@ -1,42 +1,42 @@
 import React from "react"
-import { Box, Grid, Image, Styled, Text } from "theme-ui"
+import { Box, Grid, Image, Themed, Text } from "theme-ui"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BoxOut = () => (
   <>
-    <Styled.hr />
+    <Themed.hr />
     <Grid gap={2} columns={[1, 2]}>
       <Grid gap={2}>
-        <Styled.h2>Highlight</Styled.h2>
-        <Styled.p>
+        <Themed.h2>Highlight</Themed.h2>
+        <Themed.p>
           Hello world, look at this lovely grid, what a nice play to start
           writing some bits
-        </Styled.p>
+        </Themed.p>
       </Grid>
       <Grid gap={2}>
-        <Styled.h2>Don't Forget</Styled.h2>
-        <Styled.p>
+        <Themed.h2>Don't Forget</Themed.h2>
+        <Themed.p>
           Hello world, look at this lovely grid, what a nice play to start
           writing some bits
-        </Styled.p>
+        </Themed.p>
       </Grid>
       <Grid gap={2}>
-        <Styled.h2>Important</Styled.h2>
-        <Styled.p>
+        <Themed.h2>Important</Themed.h2>
+        <Themed.p>
           Hello world, look at this lovely grid, what a nice play to start
           writing some bits
-        </Styled.p>
+        </Themed.p>
       </Grid>
       <Grid gap={2}>
-        <Styled.h2>Information</Styled.h2>
-        <Styled.p>
+        <Themed.h2>Information</Themed.h2>
+        <Themed.p>
           Hello world, look at this lovely grid, what a nice play to start
           writing some bits
-        </Styled.p>
+        </Themed.p>
       </Grid>
     </Grid>
-    <Styled.hr />
+    <Themed.hr />
   </>
 )
 
@@ -51,27 +51,27 @@ const IndexPage = () => (
           This is a caption
         </Text>
       </Box>
-      <Styled.h2>The introduction</Styled.h2>
-      <Styled.p>
+      <Themed.h2>The introduction</Themed.h2>
+      <Themed.p>
         Buttry dingbat stupid commenters Jurgen Habermas Arab spring RSS Encyclo
         CNN leaves it there collaboration, Groupon Gutenberg parenthesis iPhone
         app future of narrative digital first church of the savvy Julian Assange
         Innovator's Dilemma fourth estate, collaboration Tumblr tweets Flipboard
         David Foster Wallace the notion of the public Jeff Jarvis prostate.
         Gannett.
-      </Styled.p>
+      </Themed.p>
       <BoxOut />
-      <Styled.p>
+      <Themed.p>
         Andy Carvin bringing a tote bag to a knife fight hyperhyperlocal data
         journalism gutter he said she said Walter Lippmann, discuss Frontline
         David Foster Wallace Alberto Ibarguen David Cohn bringing a tote bag to
         a knife fight reporting Walter Cronkite died for your sins, What Would
         Google Do Steve Jobs we will make them pay Aron Pilhofer audience
         atomization overcome abundance.
-      </Styled.p>
+      </Themed.p>
 
-      <Styled.h2>A continuation of interest</Styled.h2>
-      <Styled.p>
+      <Themed.h2>A continuation of interest</Themed.h2>
+      <Themed.p>
         Buttry dingbat stupid commenters Jurgen Habermas Arab spring RSS Encyclo
         CNN leaves it there collaboration, Groupon Gutenberg parenthesis iPhone
         app future of narrative digital first church of the savvy Julian Assange
@@ -83,7 +83,7 @@ const IndexPage = () => (
         tote bag to a knife fight reporting Walter Cronkite died for your sins,
         What Would Google Do Steve Jobs we will make them pay Aron Pilhofer
         audience atomization overcome abundance.
-      </Styled.p>
+      </Themed.p>
     </Grid>
   </Layout>
 )

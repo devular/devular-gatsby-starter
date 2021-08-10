@@ -3,10 +3,10 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
-import { Flex, Grid, Styled } from "theme-ui"
+import { Flex, Grid, Themed } from "theme-ui"
 import Layout from "./layout"
 
-const components = Styled // Provide common components here
+const components = Themed // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
   const image = mdx.frontmatter.image
@@ -18,7 +18,7 @@ export default function PageTemplate({ data: { mdx } }) {
           <Grid sx={{ fontFamily: "ui", color: "text" }} columns={[3]} gap={3}>
             <span>{mdx.frontmatter.publishDate}</span>
           </Grid>
-          <Styled.h2 as="h1">{mdx.frontmatter.title}</Styled.h2>
+          <Themed.h2 as="h1">{mdx.frontmatter.title}</Themed.h2>
           {mdx.frontmatter.image && (
             <Img fluid={mdx.frontmatter.image.childImageSharp.fluid} />
           )}
@@ -34,7 +34,7 @@ export default function PageTemplate({ data: { mdx } }) {
             <span>{mdx.wordCount.words} words</span>
             <span>{mdx.frontmatter.fromNow}</span>
           </Flex>
-          <Styled.hr />
+          <Themed.hr />
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </Grid>
       </MDXProvider>
