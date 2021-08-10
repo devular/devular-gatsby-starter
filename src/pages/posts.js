@@ -1,9 +1,9 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 import { Flex, Grid, Themed } from "theme-ui"
 
@@ -22,7 +22,7 @@ const PostTeaser = ({
         <span>{publishDate}</span>
       </Grid>
       <Themed.h2>{title}</Themed.h2>
-      {image && <Img fluid={image.childImageSharp.fluid} />}
+      {image && <GatsbyImage image={image.childImageSharp.gatsbyImageData} />}
       <Flex
         sx={{
           fontFamily: "ui",
@@ -45,13 +45,10 @@ const HookDemos = () => {
   const posts = useAllPosts()
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Grid gap={3} columns={1} mb={[4, 6]} sx={{ maxWidth: [600], m: "auto" }}>
-        {/* <Themed.h1 sx={{ fontFamily: "ui", fontWeight: "bold" }}>
-          Posts
-        </Themed.h1> */}
-        {posts.map(post => (
-          <PostTeaser key={post.id} {...post} />
+        {posts.map((post, index) => (
+          <PostTeaser key={`post-${index}`} {...post} />
         ))}
       </Grid>
     </Layout>

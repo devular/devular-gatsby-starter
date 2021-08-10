@@ -21,6 +21,7 @@ const noflash = `
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
   const script = jsx("script", {
+    key: `theme-ui-no-flash`,
     dangerouslySetInnerHTML: {
       __html: noflash,
     },

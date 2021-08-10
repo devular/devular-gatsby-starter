@@ -1,7 +1,7 @@
 import React from "react"
 import { Box, Grid, Image, Themed, Text } from "theme-ui"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const BoxOut = () => (
   <>
@@ -42,7 +42,7 @@ const BoxOut = () => (
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <Grid gap={3} columns={1} mb={[4, 6]} sx={{ maxWidth: [600], m: "auto" }}>
       <Box>
         {/* Here's how you load an image from the ./static directory */}

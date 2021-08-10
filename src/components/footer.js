@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Flex, Grid, Box } from "theme-ui"
 
-export default () => (
+const Footer = () => (
   <Box
     as="footer"
     sx={{
@@ -81,3 +81,5 @@ export default () => (
     </Flex>
   </Box>
 )
+
+export default Footer

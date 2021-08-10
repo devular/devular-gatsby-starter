@@ -1,6 +1,6 @@
 import { MDXProvider } from "@mdx-js/react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import React from "react"
 import { Flex, Grid, Themed } from "theme-ui"
@@ -9,8 +9,6 @@ import Layout from "./layout"
 const components = Themed // Provide common components here
 
 export default function PageTemplate({ data: { mdx } }) {
-  const image = mdx.frontmatter.image
-  console.log({ image })
   return (
     <Layout>
       <MDXProvider components={components}>
@@ -20,7 +18,7 @@ export default function PageTemplate({ data: { mdx } }) {
           </Grid>
           <Themed.h2 as="h1">{mdx.frontmatter.title}</Themed.h2>
           {mdx.frontmatter.image && (
-            <Img fluid={mdx.frontmatter.image.childImageSharp.fluid} />
+            <GatsbyImage image={mdx.frontmatter.image.childImageSharp.gatsbyImageData} />
           )}
           <Flex
             sx={{
@@ -39,30 +37,27 @@ export default function PageTemplate({ data: { mdx } }) {
         </Grid>
       </MDXProvider>
     </Layout>
-  )
+  );
 }
 
-export const pageQuery = graphql`
-  query BlogPostQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      timeToRead
-      frontmatter {
-        title
-        publishDate: date(fromNow: false, formatString: "Do MMMM Y")
-        fromNow: date(fromNow: true)
-        image {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+export const pageQuery = graphql`query BlogPostQuery($id: String) {
+  mdx(id: {eq: $id}) {
+    id
+    body
+    timeToRead
+    frontmatter {
+      title
+      publishDate: date(fromNow: false, formatString: "Do MMMM Y")
+      fromNow: date(fromNow: true)
+      image {
+        childImageSharp {
+          gatsbyImageData(width: 800, layout: CONSTRAINED)
         }
       }
-      wordCount {
-        words
-      }
+    }
+    wordCount {
+      words
     }
   }
+}
 `
