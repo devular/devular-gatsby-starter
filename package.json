@@ -13,7 +13,7 @@
     "@theme-ui/presets": "^0.10.0",
     "gatsby": "^3.11.1",
     "gatsby-image": "^3.11.0",
-    "gatsby-plugin-image": "^1.11.0",
+    "gatsby-plugin-image": "^1.13.0",
     "gatsby-plugin-manifest": "^3.11.0",
     "gatsby-plugin-mdx": "^2.11.0",
     "gatsby-plugin-offline": "^4.11.0",
